@@ -11,6 +11,8 @@
     </Option>
     <Option descr="English">
     </Option>
+    <Option descr="616-1 PC Interface">
+    </Option>
   </ControlModule>
   <DriveModule>
     <Name>Robot1</Name>

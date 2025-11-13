@@ -1,0 +1,9 @@
+MODULE MainModule
+    
+    PROC main()
+        TPWrite"Start";
+        GenerateGrid;
+        TPWrite"End";
+    ENDPROC
+    
+ENDMODULE
