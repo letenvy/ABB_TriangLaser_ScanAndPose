@@ -1,9 +1,9 @@
 MODULE MainModule
-    
     PROC main()
-        TPWrite"Start";
-        GenerateGrid;
-        TPWrite"End";
+        !testManualMove;
+        TPWrite"[Main] Started";
+        LiveGenerateAndScanGrid;
+        TPWrite"[Main] Ended";    
+        testManualMove;
     ENDPROC
-    
 ENDMODULE

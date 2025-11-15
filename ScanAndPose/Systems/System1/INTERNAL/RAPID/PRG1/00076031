@@ -1,0 +1,5 @@
+MODULE MainModule
+    PROC main()
+        testManualMove;
+    ENDPROC
+ENDMODULE

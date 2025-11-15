@@ -1,0 +1,44 @@
+MODULE TesterModule
+    
+    CONST robtarget manualPoint1 :=
+    [
+        [750,-200,600],
+        [0,0,1,0],
+        [0,0,0,0],
+        [9E+9,9E+9,9E+9,9E+9,9E+9,9E+9]
+    ];
+    
+    CONST robtarget manualPoint2 :=
+    [
+        [950,0,600],
+        [0,0,1,0],
+        [0,0,0,0],
+        [9E+9,9E+9,9E+9,9E+9,9E+9,9E+9]
+    ];
+    
+    CONST robtarget manualPoint3 :=
+    [
+        [1150,200,600],
+        [0,0,1,0],
+        [0,0,0,0],
+        [9E+9,9E+9,9E+9,9E+9,9E+9,9E+9]
+    ];
+    
+    CONST robtarget manualPoint4 :=
+    [
+        [1250,0,600],
+        [0,0,1,0],
+        [0,0,0,0],
+        [9E+9,9E+9,9E+9,9E+9,9E+9,9E+9]
+    ];
+    
+    PROC testManualMove()
+            MoveL manualPoint1, v300, z10, tool0\WObj:=wobj0;
+            MoveL manualPoint2, v300, z10, tool0\WObj:=wobj0;
+            MoveL manualPoint3, v300, z10, tool0\WObj:=wobj0;
+            MoveL manualPoint4, v300, z10, tool0\WObj:=wobj0;
+            MoveL manualPoint1, v300, z10, tool0\WObj:=wobj0;
+            MoveL manualPoint2, v300, z10, tool0\WObj:=wobj0;
+    ENDPROC
+    
+ENDMODULE

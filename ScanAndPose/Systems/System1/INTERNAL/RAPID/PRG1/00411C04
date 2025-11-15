@@ -1,0 +1,18 @@
+MODULE TesterModule
+    
+    CONST robtarget manualPoint1 :=
+    [[750,-200,600],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    
+    CONST robtarget manualPoint2 :=
+    [[950,0,600],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    
+    CONST robtarget manualPoint3 :=
+    [[1150,200,600],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    
+    CONST robtarget manualPoint4 :=
+    [[1250,0,600],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    
+    PROC testManualMove()
+    ENDPROC
+    
+ENDMODULE
