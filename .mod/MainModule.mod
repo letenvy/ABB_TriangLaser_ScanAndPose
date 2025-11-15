@@ -1,9 +1,7 @@
 MODULE MainModule
     PROC main()
-        !testManualMove;
         TPWrite"[Main] Started";
         LiveGenerateAndScanGrid;
-        TPWrite"[Main] Ended";    
-        testManualMove;
+        TPWrite"[Main] Ended";
     ENDPROC
 ENDMODULE

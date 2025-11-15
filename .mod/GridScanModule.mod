@@ -17,7 +17,7 @@ MODULE GridScanModule
     VAR robtarget point;
     VAR robtarget real_pos;
     VAR clock scan_timer;
-    VAR num elaspsed_ms;
+    VAR num elapsed_ms;
     
     PROC LiveGenerateAndScanGrid()
         total_points := 0;
@@ -65,15 +65,21 @@ MODULE GridScanModule
     ENDPROC
 
     PROC MeasurePoint(robtarget p)
-        MoveL p, v300, z10, tool0\WObj:=wobj0;
+        MoveL p, v300, z1, tool0\WObj:=wobj0;
         WaitTime 0.1;
         real_pos:=CRobT(\Tool:=tool0,\WObj:=wobj0);
-        elaspsed_ms:=ClkRead(scan_timer)*1000;
+        elapsed_ms:=ClkRead(scan_timer)*1000;
         
-        TPWrite "[Measure] time:"+ValToStr(elaspsed_ms)+" ms";
-        TPWrite " pos: {x:"+ValToStr(real_pos.trans.x)+" y:"+ValToStr(real_pos.trans.y)+" z:"+ValToStr(real_pos.trans.z)+"}";        
+        TPWrite "[Measure] time:"+ValToStr(elapsed_ms)+" ms";
+        TPWrite " pos: {x:"+ValToStr(real_pos.trans.x)+" y:"+ValToStr(real_pos.trans.y)+" z:"+ValToStr(real_pos.trans.z)+"}";
         
-        !TCP soon
+        laser_x:=real_pos.trans.x;
+        laser_y:=real_pos.trans.y;
+        laser_z:=real_pos.trans.z;
+        laser_t:=elapsed_ms;
+        
+        ExecuteMeasurementToLaser;
+        
+        TPWrite"Laser response:"+laser_response_out;
     ENDPROC
-    
 ENDMODULE
