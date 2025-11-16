@@ -65,7 +65,7 @@ MODULE GridScanModule
     ENDPROC
 
     PROC MeasurePoint(robtarget p)
-        MoveL p, v300, z1, tool0\WObj:=wobj0;
+        MoveL p, v300, fine, tool0\WObj:=wobj0;
         WaitTime 0.1;
         real_pos:=CRobT(\Tool:=tool0,\WObj:=wobj0);
         elapsed_ms:=ClkRead(scan_timer)*1000;

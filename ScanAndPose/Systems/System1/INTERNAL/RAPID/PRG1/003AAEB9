@@ -1,0 +1,8 @@
+MODULE MainModule
+    PROC main()
+        TPWrite"[Main] Started";
+        !TestConnection;
+        LiveGenerateAndScanGrid;
+        TPWrite"[Main] Ended";
+    ENDPROC
+ENDMODULE

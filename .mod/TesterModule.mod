@@ -31,8 +31,11 @@ MODULE TesterModule
     ENDPROC
     
     PROC TestConnection()
+        
+        TPWrite"Creating socket. . .";
+        SocketCreate test_socket;
+        
         TPWrite "Attempting to connect to 127.0.0.1:12345...";
-
         SocketConnect test_socket, "127.0.0.1", 12345;
         TPWrite "Connected!";
 

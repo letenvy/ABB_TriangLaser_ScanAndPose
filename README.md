@@ -1,8 +1,8 @@
-**ABB project for scanning objects with triangulation laser**
+# ABB project for scanning objects with triangulation laser
 
 **target model: IRB-1600 10kg 1.45m**
 
-1 Grid generate method          - to be continued
-2 Grid scan method              - to be continued
-3 Self tracking: position&time  - to be continued
-4 UDP/TCP connection            - to be continued
+1. Grid generate method         - done
+2. Grid scan method             - done
+3. Self tracking: position&time - done
+4. UDP/TCP connection           - done (?) tested in simulator with dummy msgs

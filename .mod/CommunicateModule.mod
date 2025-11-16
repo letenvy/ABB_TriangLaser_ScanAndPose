@@ -14,8 +14,9 @@ MODULE CommunicateModule
     PERS string laser_response_out;
     
     PROC ExecuteMeasurementToLaser()
-        laser_request:="[Measure] x:"+ValToStr(laser_x)+" y:"+ValToStr(laser_y)+" z:"+ValToStr(laser_z)+ValToStr(laser_t);
         
+        laser_request:="[Measure] x:"+ValToStr(laser_x)+" y:"+ValToStr(laser_y)+" z:"+ValToStr(laser_z)+" t: "+ValToStr(laser_t)+" ms";
+        SocketCreate laser_socket;
         SocketConnect laser_socket,LASER_IP,LASER_PORT;
         SocketSend laser_socket,\Str:=laser_request;
         SocketReceive laser_socket,\Str:=laser_response;
