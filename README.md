@@ -5,4 +5,4 @@
 1. Grid generate method         - done
 2. Grid scan method             - done
 3. Self tracking: position&time - done
-4. UDP/TCP connection           - done (?) tested in simulator with dummy msgs
+4. TCP connection               - done
